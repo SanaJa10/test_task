@@ -43,6 +43,11 @@ def sync_interval():
     source_folder = input("Please enter the main folder directory: ")
     replica_folder = input("Please enter the replica folder directory: ")
     log_directory = input("Please enter the log directory path: ")
+
+    #log directory must be different than replica directory
+    if log_directory == replica_folder:
+        log_directory = input("Please enter a path that is outside the replica folder: ")
+
     interval = float(input("Please enter the desired sync interval in minutes: "))
 
 
